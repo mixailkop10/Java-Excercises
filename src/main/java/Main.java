@@ -37,6 +37,7 @@ public class Main {
         System.out.println("Max Factorial Number is: " + max);*/
 
         NumberTests numberTests = new NumberTests();
+        //numberTests.checkPrime();
         //numberTests.isPrime();
         //numberTests.calculateSum();
         //numberTests.countDigits();

@@ -14,23 +14,28 @@ public class NumberTests {
         System.out.println("Give a natural number: ");
         num = Integer.parseInt(scanner.nextLine());
 
-        if (num <= 1)
+        if (num <= 1){
+            System.out.println("This number isnt prime");
             return false;
+        }
         else{
             for (int i = 2; i < num; i++){
-                if (num % i == 0)
+                if (num % i == 0){
+                    System.out.println("This number isnt prime");
                     return false;
+                }
             }
         }
+        System.out.println("This number is prime");
         return true;
     }
 
-    public void isPrime(){
+    /*public void isPrime(){
         if(checkPrime() == true)
             System.out.println("This number is prime");
         else
             System.out.println("This number isn't prime");
-    }
+    }*/
 
     public double calculateSum(){
         //υπαρχει υπολογιστικο θεμα
