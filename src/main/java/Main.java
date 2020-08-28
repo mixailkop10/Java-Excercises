@@ -3,6 +3,7 @@ import Algorithms.NumberTests;
 import Arrays.NumberList;
 import Service.Ui;
 import Stacks.Reverse;
+import Strings.Password;
 import Strings.Symmetric;
 
 import java.util.ArrayList;
@@ -52,7 +53,7 @@ public class Main {
         //Factorial f = new Factorial();
         //f.CalculateSum();
 
-        ArrayList<Integer> numbers = new ArrayList<>();
+        /*ArrayList<Integer> numbers = new ArrayList<>();
         numbers.add(10);
         numbers.add(20);
         numbers.add(10);
@@ -78,7 +79,18 @@ public class Main {
         String s1 = "liverpool";
         String s2 = "Liverpool";
         Symmetric sym = new Symmetric();
-        sym.equalIgnoreCase(s1,s2);
+        sym.equalIgnoreCase(s1,s2);*/
 
+        Password password = new Password();
+        String test = "Liverpool";
+        System.out.println("hello");
+        /*System.out.println(password.hasLower(test));
+        password.hasLower(test);
+        password.hasNumber(test);
+        password.hasUpper(test);
+        password.valLength(test);
+        password.hasSpecialChar(test);
+        password.noThreeSame(test);
+        password.noThreeConsecutive(test);*/
     }
 }
