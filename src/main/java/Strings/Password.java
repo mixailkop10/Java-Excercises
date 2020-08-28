@@ -7,8 +7,12 @@ import java.util.regex.Pattern;
 
 public class Password {
 
-    Scanner scanner = new Scanner(System.in);
-    String password = scanner.nextLine();
+    //Scanner scanner = new Scanner(System.in);
+    String password;
+
+    public Password(String password) {
+        this.password = password;
+    }
 
     public boolean valLength(String password)
     {
@@ -83,12 +87,12 @@ public class Password {
         }
         for(int i=0; i<password.length()-2; i++)
         {
-            if(characters.get(i).equals(characters.get(i + 1)) && characters.get(i+1).equals(characters.get(i+3)))
+            if(characters.get(i).equals(characters.get(i + 1)) && characters.get(i+1).equals(characters.get(i+2)))
                 return false;
         }
         return true;
     }
-
+    //κατι παει λαθος εδω !!
     public boolean noThreeConsecutive(String password)
     {
         char[] passwordCharArray = password.toCharArray();
@@ -102,8 +106,7 @@ public class Password {
             if ((previousAsciiCode + 1) == asciiCode) {
                 count++;
                 if (count > 2) {
-                    isConSeq = false;
-                    break;
+                    return false;
                 }
             }
             else
@@ -111,6 +114,6 @@ public class Password {
 
             previousAsciiCode = asciiCode;
         }
-        return isConSeq;
+        return true;
     }
 }

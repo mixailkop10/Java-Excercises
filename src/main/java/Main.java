@@ -81,16 +81,16 @@ public class Main {
         Symmetric sym = new Symmetric();
         sym.equalIgnoreCase(s1,s2);*/
 
-        Password password = new Password();
         String test = "Liverpool";
+        Password pass = new Password(test);
+
         System.out.println("hello");
-        /*System.out.println(password.hasLower(test));
-        password.hasLower(test);
-        password.hasNumber(test);
-        password.hasUpper(test);
-        password.valLength(test);
-        password.hasSpecialChar(test);
-        password.noThreeSame(test);
-        password.noThreeConsecutive(test);*/
+        System.out.println(pass.hasLower(test));
+        System.out.println(pass.hasUpper(test));
+        System.out.println(pass.hasNumber(test));
+        System.out.println(pass.hasSpecialChar(test));
+        System.out.println(pass.valLength(test));
+        System.out.println(pass.noThreeSame(test));
+        System.out.println(pass.noThreeConsecutive(test));
     }
 }
