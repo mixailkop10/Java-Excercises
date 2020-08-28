@@ -1,7 +1,12 @@
 import Algorithms.Factorial;
 import Algorithms.NumberTests;
+import Arrays.NumberList;
 import Service.Ui;
+import Stacks.Reverse;
+import Strings.Symmetric;
 
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.Scanner;
 
 public class Main {
@@ -42,5 +47,38 @@ public class Main {
         //numberTests.calculateSum();
         //numberTests.countDigits();
         //numberTests.printDecimalPart();
+        //NumberList numberList = new NumberList();
+        //numberList.onlyPrimeNum();
+        //Factorial f = new Factorial();
+        //f.CalculateSum();
+
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(10);
+        numbers.add(20);
+        numbers.add(10);
+        numbers.add(10);
+        System.out.println(numbers);
+        ArrayList<Integer> noDuplNumbers =
+                new ArrayList<>(new LinkedHashSet<>(numbers));
+        System.out.println(noDuplNumbers);
+
+        ArrayList<Integer> nums = new ArrayList<>();
+        nums.add(5);
+        nums.add(6);
+        nums.add(8);
+        System.out.println(nums);
+        nums.removeIf(n -> (n%2 !=0));
+        System.out.println(nums);
+
+        StringBuffer s= new StringBuffer("Liverpool");
+        Reverse r = new Reverse(10);
+        r.reverse(s);
+        System.out.println("Reversed string is " + s);
+
+        String s1 = "liverpool";
+        String s2 = "Liverpool";
+        Symmetric sym = new Symmetric();
+        sym.equalIgnoreCase(s1,s2);
+
     }
 }
