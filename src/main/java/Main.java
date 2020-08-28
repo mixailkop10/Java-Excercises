@@ -80,17 +80,19 @@ public class Main {
         String s2 = "Liverpool";
         Symmetric sym = new Symmetric();
         sym.equalIgnoreCase(s1,s2);*/
-
-        String test = "Liverpool";
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Give a password: ");
+        String test = scanner.nextLine();
         Password pass = new Password(test);
 
-        System.out.println("hello");
-        System.out.println(pass.hasLower(test));
+        /*System.out.println(pass.hasLower(test));
         System.out.println(pass.hasUpper(test));
         System.out.println(pass.hasNumber(test));
         System.out.println(pass.hasSpecialChar(test));
         System.out.println(pass.valLength(test));
         System.out.println(pass.noThreeSame(test));
-        System.out.println(pass.noThreeConsecutive(test));
+        System.out.println(pass.noThreeConsecutive(test));*/
+
+        pass.passwordAccepted(test);
     }
 }

@@ -18,7 +18,6 @@ public class Password {
     {
         if(password.length() > 7)
         {
-
             return true;
         }
         else
@@ -115,5 +114,57 @@ public class Password {
             previousAsciiCode = asciiCode;
         }
         return true;
+    }
+
+    public void passwordAccepted(String password)
+    {
+        boolean hasUp = false, hasLow = false , hasNum = false , hasChar = false , hasLen = false, notHasSame = false ;
+        ArrayList<Boolean> checkCriteria = new ArrayList<Boolean>();
+
+        if(valLength(password))
+            hasLen = true;
+        if(hasUpper(password))
+            hasUp = true;
+        if(hasLower(password))
+            hasLow = true;
+        if(hasNumber(password))
+            hasNum = true;
+        if(hasSpecialChar(password))
+            hasChar = true;
+        if(noThreeSame(password) && noThreeConsecutive(password))
+            notHasSame = true;
+
+        checkCriteria.add(hasUp);
+        checkCriteria.add(hasLow);
+        checkCriteria.add(hasNum);
+        checkCriteria.add(hasChar);
+        checkCriteria.add(notHasSame);
+
+        int count = 0;
+        for(Boolean b: checkCriteria){
+            if(b == true)
+                count++;
+        }
+
+        if(hasLen == true){
+            if(count == 5)
+                System.out.println("Very Strong Password");
+            else if(count == 4)
+                System.out.println("Strong Password");
+            else if(count == 3 || count == 2)
+                System.out.println("Password OK");
+            else{
+                System.out.println("Invalid Password");
+                System.out.println("Your Password must match these criterias");
+                System.out.println("1. Password contains at least one uppercase character " +
+                        "2. Password contains at least one lowercase character " +
+                        "3. Contains at least one number " +
+                        "4. Contains at least one special character (e.g., !, _ etc) " +
+                        "5. Password length must be at least 8 characters long " +
+                        "6. Cannot contain a sequence of 3 same characters (i.e. aaa) or a sequence of 3 consecutive characters (i.e abc)");
+            }
+        }
+
+
     }
 }
