@@ -14,14 +14,19 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int factorial = 1;
+        Ui ui = new Ui();
+        do{
+            ui.menu();
+        }while(ui.keepRolling());
+
+        /*int factorial = 1;
         int num = 0;
         int i = 1;
 
 
-        //System.out.println(Integer.MAX_VALUE);
+        System.out.println(Integer.MAX_VALUE);
 
-        /*Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Give a natural number: ");
         num = Integer.parseInt(scanner.nextLine());
         if (num == 0)
@@ -42,7 +47,7 @@ public class Main {
         int max = num - 1;
         System.out.println("Max Factorial Number is: " + max);*/
 
-        NumberTests numberTests = new NumberTests();
+        //NumberTests numberTests = new NumberTests();
         //numberTests.checkPrime();
         //numberTests.isPrime();
         //numberTests.calculateSum();
@@ -79,20 +84,20 @@ public class Main {
         String s1 = "liverpool";
         String s2 = "Liverpool";
         Symmetric sym = new Symmetric();
-        sym.equalIgnoreCase(s1,s2);*/
+        sym.equalIgnoreCase(s1,s2);
         Scanner scanner = new Scanner(System.in);
         System.out.println("Give a password: ");
         String test = scanner.nextLine();
         Password pass = new Password(test);
 
-        /*System.out.println(pass.hasLower(test));
+        System.out.println(pass.hasLower(test));
         System.out.println(pass.hasUpper(test));
         System.out.println(pass.hasNumber(test));
         System.out.println(pass.hasSpecialChar(test));
         System.out.println(pass.valLength(test));
         System.out.println(pass.noThreeSame(test));
-        System.out.println(pass.noThreeConsecutive(test));*/
+        System.out.println(pass.noThreeConsecutive(test));
 
-        pass.passwordAccepted(test);
+        pass.passwordAccepted(test);*/
     }
 }

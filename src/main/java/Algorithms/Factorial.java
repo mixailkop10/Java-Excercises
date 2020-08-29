@@ -10,9 +10,9 @@ public class Factorial {
 
     public int CalculateFactorial(int num){
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Give a natural number: ");
-        num = Integer.parseInt(scanner.nextLine());
+        //Scanner scanner = new Scanner(System.in);
+        //System.out.println("Give a natural number: ");
+        //num = Integer.parseInt(scanner.nextLine());
 
         if(num == 0)
             return 1;

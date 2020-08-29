@@ -8,11 +8,11 @@ public class NumberTests {
     double sum = 0;
     int counter = 0;
 
-    public boolean checkPrime()
+    public boolean checkPrime(int num)
     {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Give a natural number: ");
-        num = Integer.parseInt(scanner.nextLine());
+        //Scanner scanner = new Scanner(System.in);
+        //System.out.println("Give a natural number: ");
+        //num = Integer.parseInt(scanner.nextLine());
 
         if (num <= 1){
             System.out.println("This number isnt prime");
@@ -37,11 +37,11 @@ public class NumberTests {
             System.out.println("This number isn't prime");
     }*/
 
-    public double calculateSum(){
+    public double calculateSum(int num){
         //υπαρχει υπολογιστικο θεμα
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Give a number: ");
-        num = Integer.parseInt(scanner.nextLine());
+        //Scanner scanner = new Scanner(System.in);
+        //System.out.println("Give a number: ");
+        //num = Integer.parseInt(scanner.nextLine());
 
         for (int i = 1; i <= num; i++)
             sum += (1/i);
@@ -50,13 +50,14 @@ public class NumberTests {
         return sum;
     }
 
-    public double countDigits(){
+    public double countDigits(long number){
 
-        long number = 0l;
+        //long number = 0l;
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Give a number: ");
-        number = Long.parseLong(scanner.nextLine());
+        //Scanner scanner = new Scanner(System.in);
+        //System.out.println("Give a number: ");
+        //number = Long.parseLong(scanner.nextLine());
+
         //αν δεν κανω αυτην την αναθεση στο sout θα βγαλει "the number 0"
         long number2 = number;
 
@@ -71,8 +72,8 @@ public class NumberTests {
         return counter;
     }
 
-    public void printDecimalPart(){
-        double number = 0;
+    public void printDecimalPart(double number){
+        //double number = 0;
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Give a number: ");

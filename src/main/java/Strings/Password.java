@@ -10,10 +10,6 @@ public class Password {
     //Scanner scanner = new Scanner(System.in);
     String password;
 
-    public Password(String password) {
-        this.password = password;
-    }
-
     public boolean valLength(String password)
     {
         if(password.length() > 7)

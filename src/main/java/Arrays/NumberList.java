@@ -11,11 +11,11 @@ public class NumberList {
     ArrayList<NumberTests> numbers = new ArrayList<>();
     ArrayList<NumberTests> primeNumbers = new ArrayList<>();
     ArrayList<Integer> nums = new ArrayList<>();
-
-    public void onlyPrimeNum()
+    int num = 0;
+    public void onlyPrimeNum(int num)
     {
         for(NumberTests n: numbers){
-            if(n.checkPrime() == true)
+            if(n.checkPrime(num) == true)
                 primeNumbers.add(n);
         }
         System.out.println("Prime numbers: " +primeNumbers.toString());
@@ -30,6 +30,7 @@ public class NumberList {
     public void noDuplicate(ArrayList<Integer> nums)
     {
         ArrayList<Integer> noDuplNumbers = new ArrayList<>(new LinkedHashSet<>(nums));
+        System.out.println("The list without duplicates: " +noDuplNumbers.toString());
     }
 
     public void digitsDescended()
