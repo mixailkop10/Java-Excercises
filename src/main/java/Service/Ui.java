@@ -59,8 +59,6 @@ public class Ui {
                 break;
             case 3:
                 Factorial factorial1 = new Factorial();
-                //System.out.println("Enter a number:\n");
-                //doubleNum = Double.parseDouble(scanner.nextLine());
                 System.out.println("The sum of that series is: " + factorial1.CalculateSum(doubleNum));
                 break;
             case 4:
@@ -68,7 +66,8 @@ public class Ui {
                 NumberTests numberTests2 = new NumberTests();
                 System.out.println("Enter a long number: \n");
                 longNum = Long.parseLong(scanner.nextLine());
-                System.out.println("This number has: " +numberTests2.countDigits(longNum) + " digits ");
+                numberTests2.countDigits(longNum);
+
                 break;
             case 5:
                 NumberTests numberTests3 = new NumberTests();
