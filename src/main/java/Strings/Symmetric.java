@@ -17,7 +17,7 @@ public class Symmetric {
         // If there are more than
         // two characters, check if
         // middle substring is also
-        // palindrome or not.
+        // symmetric or not.
         if (s < e + 1)
             return isPalRec(str, s + 1, e - 1);
 
@@ -29,7 +29,7 @@ public class Symmetric {
         int n = str.length();
 
         // An empty string is
-        // considered as palindrome
+        // considered as symmetric
         if (n == 0)
             return true;
 

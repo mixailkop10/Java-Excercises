@@ -7,7 +7,6 @@ import java.util.regex.Pattern;
 
 public class Password {
 
-    //Scanner scanner = new Scanner(System.in);
     String password;
 
     public boolean valLength(String password)

@@ -8,18 +8,8 @@ import java.util.Scanner;
 
 public class NumberList {
 
-    ArrayList<NumberTests> numbers = new ArrayList<>();
-    ArrayList<NumberTests> primeNumbers = new ArrayList<>();
     ArrayList<Integer> nums = new ArrayList<>();
     int num = 0;
-    public void onlyPrimeNum(int num)
-    {
-        for(NumberTests n: numbers){
-            if(n.checkPrime(num) == true)
-                primeNumbers.add(n);
-        }
-        System.out.println("Prime numbers: " +primeNumbers.toString());
-    }
 
     public void onlyPrime(ArrayList<Integer> nums)
     {

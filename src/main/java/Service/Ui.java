@@ -18,6 +18,7 @@ public class Ui {
 
     public void menu()
     {
+        System.out.println(" ===================== ");
         System.out.println("What do you Wanna Do ??");
         System.out.println("1.Factorial nums");
         System.out.println("2.Prime nums");
@@ -38,6 +39,7 @@ public class Ui {
         int answer = Integer.parseInt(scanner.nextLine());
         boolean continues = true;
         int number = 0;
+        double doubleNum = 0;
 
         switch (answer) {
             case 1:
@@ -53,13 +55,13 @@ public class Ui {
 
                 System.out.println("Enter a number:\n");
                 number = Integer.parseInt(scanner.nextLine());
-                System.out.println(numberTests.checkPrime(number));
+                numberTests.checkPrime(number);
                 break;
             case 3:
-                NumberTests numberTests1 = new NumberTests();
-                System.out.println("Enter a number:\n");
-                number = Integer.parseInt(scanner.nextLine());
-                System.out.println("The sum of that series is: " + numberTests1.calculateSum(number));
+                Factorial factorial1 = new Factorial();
+                //System.out.println("Enter a number:\n");
+                //doubleNum = Double.parseDouble(scanner.nextLine());
+                System.out.println("The sum of that series is: " + factorial1.CalculateSum(doubleNum));
                 break;
             case 4:
                 long longNum;
@@ -69,7 +71,6 @@ public class Ui {
                 System.out.println("This number has: " +numberTests2.countDigits(longNum) + " digits ");
                 break;
             case 5:
-                double doubleNum;
                 NumberTests numberTests3 = new NumberTests();
                 System.out.println("Enter a double number: \n");
                 doubleNum = Double.parseDouble(scanner.nextLine());

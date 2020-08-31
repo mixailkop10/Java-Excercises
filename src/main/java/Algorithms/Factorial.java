@@ -10,10 +10,6 @@ public class Factorial {
 
     public int CalculateFactorial(int num){
 
-        //Scanner scanner = new Scanner(System.in);
-        //System.out.println("Give a natural number: ");
-        //num = Integer.parseInt(scanner.nextLine());
-
         if(num == 0)
             return 1;
         else{
@@ -37,14 +33,14 @@ public class Factorial {
 
     }
 
-    public double CalculateSum(){
+    public double CalculateSum(double sum){
         //υπαρχει υπολογιστικο θεμα
         Scanner scanner = new Scanner(System.in);
         System.out.println("Give a number: ");
         num = Integer.parseInt(scanner.nextLine());
 
         for (int i = 1; i <= num; i++)
-            sum +=  ((1.0/CalculateFactorial(i))/2);
+            sum +=  ((1.0/CalculateFactorial(i)));
 
         System.out.println("The sum of the series 1 + ½ + ⅓+ ... + 1/n for number " +num + " is :" +sum);
         return sum;
