@@ -71,8 +71,6 @@ public class Ui {
                 break;
             case 5:
                 NumberTests numberTests3 = new NumberTests();
-                System.out.println("Enter a double number: \n");
-                doubleNum = Double.parseDouble(scanner.nextLine());
                 numberTests3.printDecimalPart(doubleNum);
                 break;
             case 6:
@@ -87,13 +85,14 @@ public class Ui {
                     System.out.println("next number: ");
                 }
                 System.out.println("The list before any check: " +numbersGiven.toString());
+                System.out.println("------------");
                 NumberList numberList = new NumberList();
                 numberList.onlyPrime(numbersGiven);
+                System.out.println("------------");
                 numberList.noDuplicate(numbersGiven);
+                // δεν μπορω να βρω τον λογο που το noDuplicate εφαρμοζεται πανω στον πινακα onlyPrime και οχι στον αρχικο
                 break;
             case 7:
-                //System.out.println("Enter a number:");
-                //number = Math.abs(Integer.parseInt(scanner.nextLine()));
                 NumberList numberList1 = new NumberList();
                 numberList1.digitsDescended();
                 break;
@@ -106,6 +105,7 @@ public class Ui {
                 reverse.reverse(stringBuffer);
                 break;
             case 9:
+                //υπαρχει λαθος εδω
                 System.out.println("Enter a word: ");
                 String s = scanner.nextLine();
                 Symmetric symmetric = new Symmetric();

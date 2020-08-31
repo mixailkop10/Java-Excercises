@@ -34,7 +34,6 @@ public class Factorial {
     }
 
     public double CalculateSum(double sum){
-        //υπαρχει υπολογιστικο θεμα
         Scanner scanner = new Scanner(System.in);
         System.out.println("Give a number: ");
         num = Integer.parseInt(scanner.nextLine());

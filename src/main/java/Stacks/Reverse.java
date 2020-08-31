@@ -52,5 +52,6 @@ public class Reverse {
             char ch = obj.pop();
             str.setCharAt(i, ch);
         }
+        System.out.println(str);
     }
 }

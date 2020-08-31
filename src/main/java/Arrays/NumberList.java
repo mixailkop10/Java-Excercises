@@ -8,13 +8,14 @@ import java.util.Scanner;
 
 public class NumberList {
 
-    ArrayList<Integer> nums = new ArrayList<>();
+    //ArrayList<Integer> nums = new ArrayList<>();
     int num = 0;
 
     public void onlyPrime(ArrayList<Integer> nums)
     {
-        nums.removeIf(n -> (n%2 !=0));
-        System.out.print("Prime numbers of the List: " + nums.toString());
+        nums.removeIf(n -> (n%2 == 0));
+        nums.removeIf(n -> n == 1);
+        System.out.println("Prime numbers of the List: " + nums.toString());
     }
 
     public void noDuplicate(ArrayList<Integer> nums)
