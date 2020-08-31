@@ -40,6 +40,7 @@ public class Ui {
         boolean continues = true;
         int number = 0;
         double doubleNum = 0;
+        long longNum = 0;
 
         switch (answer) {
             case 1:
@@ -62,7 +63,6 @@ public class Ui {
                 System.out.println("The sum of that series is: " + factorial1.CalculateSum(doubleNum));
                 break;
             case 4:
-                long longNum;
                 NumberTests numberTests2 = new NumberTests();
                 System.out.println("Enter a long number: \n");
                 longNum = Long.parseLong(scanner.nextLine());
@@ -78,19 +78,25 @@ public class Ui {
                 int listsize = Integer.parseInt(scanner.nextLine());
                 System.out.println("Enter numbers : \n");
                 ArrayList<Integer> numbersGiven = new ArrayList<>(listsize);
+                ArrayList<Integer> numbersGiven2 = new ArrayList<>(listsize);
 
                 while (numbersGiven.size() < listsize) {
                     number = Integer.parseInt(scanner.nextLine());
                     numbersGiven.add(number);
+                    numbersGiven2.add(number);
                     System.out.println("next number: ");
                 }
+
                 System.out.println("The list before any check: " +numbersGiven.toString());
                 System.out.println("------------");
                 NumberList numberList = new NumberList();
                 numberList.onlyPrime(numbersGiven);
                 System.out.println("------------");
-                numberList.noDuplicate(numbersGiven);
-                // δεν μπορω να βρω τον λογο που το noDuplicate εφαρμοζεται πανω στον πινακα onlyPrime και οχι στον αρχικο
+                numberList.noDuplicate(numbersGiven2);
+                // αν δεν εφτιαχνα την numbersGiven2 και στην γραμμη 97 περνουσα ως παραμετρο το numbersGiven θα εκανε τον duplicate ελεγχο
+                // πανω στην λιστα αφοτου περασε τον ελεγχο ως onlyPrime
+                // δοκιμασα πολλους τροπους ακομα και να κανω τις συναρτησεις public ArrayList στην αντιστοιχη κλασση αλλα δεν μπορεσα
+                // οποτε το εκανα ετσι λαικα !!
                 break;
             case 7:
                 NumberList numberList1 = new NumberList();
@@ -105,11 +111,10 @@ public class Ui {
                 reverse.reverse(stringBuffer);
                 break;
             case 9:
-                //υπαρχει λαθος εδω
-                System.out.println("Enter a word: ");
+                System.out.println("Write a word: ");
                 String s = scanner.nextLine();
                 Symmetric symmetric = new Symmetric();
-                symmetric.isSymmetric(s);
+                symmetric.checkIfSymmetric(s);
                 break;
             case 10:
                 System.out.println("Enter your password");

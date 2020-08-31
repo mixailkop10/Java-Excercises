@@ -2,37 +2,23 @@ package Strings;
 
 public class Symmetric {
 
-    public boolean isPalRec(String str,
-                            int s, int e)
-    {
-        // If there is only one character
-        if (s == e)
-            return true;
+    public void checkIfSymmetric(String s) {
+        String string = s.replaceAll("\\s+", "").toLowerCase();
+        int length = string.length();
+        int forward = 0;
+        int backward = length - 1;
+        char forwChar = 0;
+        char backChar = 0;
 
-        // If first and last
-        // characters do not match
-        if ((str.charAt(s)) != (str.charAt(e)))
-            return false;
+        while (backward > forward) {
+            forwChar = string.charAt(forward++);
+            backChar = string.charAt(backward--);
+        }
 
-        // If there are more than
-        // two characters, check if
-        // middle substring is also
-        // symmetric or not.
-        if (s < e + 1)
-            return isPalRec(str, s + 1, e - 1);
+        if (forwChar != backChar)
+            System.out.println(s + " is not symmetric");
+        else
+            System.out.println(s + " is symmetric");
 
-        return true;
-    }
-
-    public boolean isSymmetric(String str)
-    {
-        int n = str.length();
-
-        // An empty string is
-        // considered as symmetric
-        if (n == 0)
-            return true;
-
-        return isPalRec(str, 0, n - 1);
     }
 }
